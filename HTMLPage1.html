@@ -1,0 +1,462 @@
+﻿<!doctype html>
+<html lang=en>
+
+<head>
+    <title>CSE309: Web App By Md Rakib Hossain</title>
+    <meta charset=utf-8>
+    <meta http-equiv=x-ua-compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=description
+          content="CSE309 is a course of learnig web applications which is the fundamental of computer science concepts. This course is very important in Computer sciene and Egineering Department.">
+    <meta property="og:description"
+          content="CSE309 is a course of learnig web applications which is the fundamental of computer science concepts. This course is very important in Computer sciene and Egineering Department.">
+    <meta property="og:site_name" content="CSE309">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CSE309: Web App By Md Rakib Hossain">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/a17t@latest/dist/a17t.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/a17t@latest/dist/tailwind.css">
+    <style>
+        :root {
+            --family-secondary: "Source Sans Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --family-primary: var(--family-secondary);
+            --code-color: var(--color-neutral-800);
+            --code-background: var(--color-neutral-100);
+            --color-neutral-000: #ffffff;
+            --color-neutral-50: #f3f4f6;
+            --color-neutral-100: #e5e7eb;
+            --color-neutral-200: #a7c1e9;
+            --color-neutral-300: #6998e9;
+            --color-neutral-400: #3469d1;
+            --color-neutral-500: #2369ca;
+            --color-neutral-600: #2061ca;
+            --color-neutral-700: #1e68cf;
+            --color-neutral-800: #1654db;
+            --color-neutral-900: #0b4be0;
+            --color-critical-000: #e1f5d1;
+            --color-critical-50: #b9eec2;
+            --color-critical-100: #b1f5a4;
+            --color-critical-200: #89f1b1;
+            --color-critical-300: #5cf18e;
+            --color-critical-400: #5aec3c;
+            --color-critical-500: #20f042;
+            --color-critical-600: #16b410;
+            --color-critical-700: #155206;
+            --color-critical-800: #043d07;
+            --color-critical-900: #012705;
+            --color-warning-000: #fffbeb;
+            --color-warning-50: #fef3c7;
+            --color-warning-100: #fde68a;
+            --color-warning-200: #fcd34d;
+            --color-warning-300: #fbbf24;
+            --color-warning-400: #f59e0b;
+            --color-warning-500: #d97706;
+            --color-warning-600: #b45309;
+            --color-warning-700: #92400e;
+            --color-warning-800: #783900;
+            --color-warning-900: #411e01;
+            --color-positive-000: #f0fdf4;
+            --color-positive-50: #eec5e8;
+            --color-positive-100: #f7bbf2;
+            --color-positive-200: #eb86ef;
+            --color-positive-300: #de4abe;
+            --color-positive-400: #c522aa;
+            --color-positive-500: #7b16a3;
+            --color-positive-600: #741580;
+            --color-positive-700: #5c1665;
+            --color-positive-800: #441453;
+            --color-positive-900: #2e0f2b;
+            --color-info-000: #eff6ff;
+            --color-info-50: #dbeafe;
+            --color-info-100: #bfdbfe;
+            --color-info-200: #fd9393;
+            --color-info-300: #fa6060;
+            --color-info-400: #f63b3b;
+            --color-info-500: #eb2525;
+            --color-info-600: #d81d1d;
+            --color-info-700: #af1e1e;
+            --color-info-800: #8a1e1e;
+            --color-info-900: #4e1414;
+            --color-urge-000: #f5f3ff;
+            --color-urge-50: #ede9fe;
+            --color-urge-100: #ddd6fe;
+            --color-urge-200: #c4b5fd;
+            --color-urge-300: #a78bfa;
+            --color-urge-400: #8b5cf6;
+            --color-urge-500: #7c3aed;
+            --color-urge-600: #6d28d9;
+            --color-urge-700: #5b21b6;
+            --color-urge-800: #4c1d95;
+            --color-urge-900: #240e44;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-neutral-900: #ffffff;
+                --color-neutral-800: #f3f4f6;
+                --color-neutral-700: #e5e7eb;
+                --color-neutral-600: #d1d5db;
+                --color-neutral-500: #9ca3af;
+                --color-neutral-400: #6b7280;
+                --color-neutral-300: #4b5563;
+                --color-neutral-200: #374151;
+                --color-neutral-100: #1f2937;
+                --color-neutral-50: #172136;
+                --color-neutral-000: #0b0f18;
+                --color-critical-900: #fef2f2;
+                --color-critical-800: #fee2e2;
+                --color-critical-700: #fecaca;
+                --color-critical-600: #fca5a5;
+                --color-critical-500: #f87171;
+                --color-critical-400: #ef4444;
+                --color-critical-300: #dc2626;
+                --color-critical-200: #b91c1c;
+                --color-critical-100: #991b1b;
+                --color-critical-50: #7f1d1d;
+                --color-critical-000: #441313;
+                --color-warning-900: #fffbeb;
+                --color-warning-800: #fef3c7;
+                --color-warning-700: #fde68a;
+                --color-warning-600: #fcd34d;
+                --color-warning-500: #fbbf24;
+                --color-warning-400: #f59e0b;
+                --color-warning-300: #d97706;
+                --color-warning-200: #b45309;
+                --color-warning-100: #92400e;
+                --color-warning-50: #783900;
+                --color-warning-000: #411e01;
+                --color-positive-900: #f0fdf4;
+                --color-positive-800: #dcfce7;
+                --color-positive-700: #bbf7d0;
+                --color-positive-600: #86efac;
+                --color-positive-500: #4ade80;
+                --color-positive-400: #22c55e;
+                --color-positive-300: #16a34a;
+                --color-positive-200: #15803d;
+                --color-positive-100: #166534;
+                --color-positive-50: #14532d;
+                --color-positive-000: #0f2e1b;
+                --color-info-900: #eff6ff;
+                --color-info-800: #dbeafe;
+                --color-info-700: #bfdbfe;
+                --color-info-600: #93c5fd;
+                --color-info-500: #60a5fa;
+                --color-info-400: #3b82f6;
+                --color-info-300: #2563eb;
+                --color-info-200: #1d4ed8;
+                --color-info-100: #1e40af;
+                --color-info-50: #1e3a8a;
+                --color-info-000: #14244e;
+                --color-urge-900: #f5f3ff;
+                --color-urge-800: #ede9fe;
+                --color-urge-700: #ddd6fe;
+                --color-urge-600: #c4b5fd;
+                --color-urge-500: #a78bfa;
+                --color-urge-400: #8b5cf6;
+                --color-urge-300: #7c3aed;
+                --color-urge-200: #6d28d9;
+                --color-urge-100: #5b21b6;
+                --color-urge-50: #4c1d95;
+                --color-urge-000: #240e44;
+            }
+        }
+    </style>
+</head>
+
+<body class=bg-neutral-000>
+    <section class="max-w-6xl mx-auto p-4 relative min-h-screen">
+        <div class="md:flex md:justify-center md:mt-48 relative">
+            <aside class="md:sticky md:top-0 self-start md:pt-8">
+                <nav class="flex justify-between w-full items-center md:block mb-12 md:mb-0" aria-label=navigation>
+                    <span class="flex justify-end md:w-full md:mb-12">
+                    <img class="h-18 md:h-18" alt="the  logo"
+                        src=245-2457689_iub-independent-university-bangladesh-logo.jpg>
+                    </span>
+                    <div
+                        class="text-right md:-mt-1">
+                        <div class=md:text-right>
+                            <ul class="-ml-2 md:ml-0 flex md:block">
+                                <li>
+                                    <div class="portal font-semibold ~warning text-warning-500">
+                                        <a href=# Course Objectives />
+                                        <span>Course Objectives</span>
+                                        </a>
+                                    </div>
+                                    <br>
+                                </li>
+                                <li>
+                                    <div class="portal font-semibold ~positive text-positive-500">
+                                        <a href=#details />
+                                        <span>Details</span>
+                                        </a>
+                                    </div>
+                                    <br>
+                                </li>
+                                <li>
+                                    <div class="portal font-semibold ~info text-info-500">
+                                        <a href=#instructors />
+                                        <span>Instructors</span>
+                                        </a>
+                                    </div>
+                                    <br>
+                                </li>
+                                <li>
+                                    <div class="portal font-semibold ~urge text-urge-500">
+                                        <a href=#syllabus />
+                                        <span>Course Policy</span>
+                                        </a>
+                                    </div>
+                                    <br>
+                                </li>
+                                <li>
+                                    <div class="portal font-semibold ~critical text-critical-500">
+                                        <a href=#ama />
+                                        <span>Suggested Textbooks:</span>
+                                        </a>
+                                    </div>
+                                    <br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+            <div class="md:min-w-xl md:max-w-xl md:mx-16 md:pt-6">
+                <section>
+                    <div>
+                        <h3 class="inline heading font-bold md:text-4xl">
+                            CSE309
+                        </h3>
+                        <h3 class="inline heading font-bold md:text-4xl opacity-50">
+                            <br>Web App By Md Rakib Hossain
+                        </h3>
+                    </div>
+                    <div class=mt-4>
+                        <span class="chip ~neutral !normal bg-neutral-100 mb-2 mr-2">
+                            Autumn 2022
+                        </span>
+                        <span class="chip ~neutral !normal bg-neutral-100 mb-2 mr-2">Room: CSE Lab 3</span>
+                        <span class="chip ~neutral !normal bg-neutral-100 mb-2 mr-2">MW 8:00am-9:30am</span>
+                        <span class="chip ~neutral !normal bg-neutral-100 mb-2 mr-2">Main Building, Level 4</span>
+                    </div>
+                </section>
+                <hr class="sep h-8">
+                <main>
+                    <section class=content>
+                        <p>This course serves as a comprehensive overview of web technologies and their usage. Essential topics such as OSI & TCP/IP architecture, Internet Routing, IP addressing & Domain Name System will be covered. Discussions will be held on popular browsers, HTML and Cascading Style Sheet, HTTP, HTTPS, FTP, Client and Server side scripts, Scripting (JavaScript, AJAX, XML) with jQuery libraries, Web Servers (IIS, Apache). Students will learn to design dynamic websites using ASP.NET with SQL server and PHP with My SQL. A brief overview of topics in web security such as cryptography, digital signatures, digital certificates, authentication & firewall will be provided.</p>
+                        <h2 id="news">Program Learning Outcome</h2>
+                        <div class="flex gap-5">
+                            <div class="w-12">
+                                <span class="chip ~neutral !low bg-neutral-50">PLO</span>
+                            </div>
+                            <div class="flex-grow">
+                                <p>Welcome to CSE309! Apply knowledge of mathematics, natural science, engineering fundamentals and an engineering specialization as specified in K1 to K4 respectively to the solution of complex engineering problems.</p>
+                                <p class="mt-2">
+                                    Identify, formulate, research literature and analyse complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences and engineering sciences.
+                                    Design solutions for complex engineering  problems and design systems, components or processes that meet specified needs with appropriate consideration for public health and safety, cultural, societal, and environmental considerations.
+                                    Function effectively as an individual, and as a member or leader in diverse teams and in multi-disciplinary settings.
+                                    
+                                     <strong>.</strong>; </p>
+                            </div>
+                        </div>
+                        <h2 id="details">Course Details</h2>
+                        <p>We're looking forward to a great quarter with you in CSE309! We know you are being equipped with the tools to make super cool stuff. However, sometimes it is difficult to see where these tools fit in the larger scheme of things. We want to show you ways to put the skills you have learned to good social use! Here are our objectives:</p>
+                        <ul>
+                            <li><strong>Awareness:</strong> For students to gain awareness about the applicability of technology and computer science to enact social good in the world.</li>
+                            <li><strong>Exposure:</strong> For students to learn how to utilize their skills to build tools and projects that create positive social impact.</li>
+                            <li><strong>Utilization:</strong> For students to gain exposure to the variety of current projects and efforts to use computer science for social good.</li>
+                        </ul>
+                        <p>Now, let's get into some important details: expectations, grading, and meeting time!</p>
+                        <h4>Student Expectations</h4>
+                        <p>Students are expected to attend class each week and participate in class lectures, discussions, and exercises. Every week will have a check-off form with some simple questions from class and feedback prompts for the teaching team; we leave time at the end of class for you to complete the check-off form (and we expect it to take no more than five minutes), and will close at 11:59pm the day of class. This will be the way we check your attendance.</p>
+                        <h4>Grading</h4>
+                        <p>Students will be graded on the basis of attendance and participation. Participation and attending a minimum of 8 out of 9 classes are requirements to receive credit. In the case that a student will miss more than one class due to extenuating circumstances, please contact the teaching staff to receive an excused absence (e.g., illness). If you miss class, please email us! We understand that life can be complicated, and can provide excused absences when necessary. We will always create a path for you to pass CS 106S &mdash; but we promise that the easiest way will be just to come to class.</p>
+                        <h4>Meeting Time &amp; Coursework</h4>
+                        <p>CSE309 will meet every Tuesday afternoon from 4:30p to 6:30p PT in 540-108. Students will receive 1 unit of S/NC credit. Except in cases where students miss class (which we will handle on a case by case basis), no work will be required outside of our class meetings.</p>
+                        <h4>Auditing</h4>
+                        <p>We welcome auditors! Send an email to <strong>CSE309-aut2223-staff@lists.stanford.edu</strong> to be added to the mailing list. Because CS 106S is offered in-person (and lectures are not recorded), only on-campus Stanford students can attend. That being said, anyone may use our digital materials. (And feel free to email us if you think we forgot to post something!)</p>
+                        <h4>Stanford Policies</h4>
+                        <p>All students are expected to abide by Stanford’s Honor Code and to wear a mask if attending in-person.</p>
+                        <h4>Students with Documented Disabilities</h4>
+                        <p>Students who may need an academic accommodation based on the impact of a disability must initiate the request with the <a href="https://oae.stanford.edu/">Office of Accessible Education</a> (OAE). Professional staff will evaluate the request with required documentation, recommend reasonable accommodations, and prepare an Accommodation Letter for faculty dated in the current quarter in which the request is being made. Students should contact the OAE as soon as possible since timely notice is needed to coordinate accommodations.  The OAE is located at 563 Salvatierra Walk (phone: 650-723-1066)</p>
+                        <h2 id="instructors">Instructors</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-1 gap-2">
+                            <div class="text-center">
+                                <img src="images/miles_mccain.png" alt="Sanzar Adnan Alam" class="rounded-full h-20 w-20 mx-auto">
+                                <p class="font-semibold">Email: sanzar@iub.edu.bd</p>
+                            </div>
+                            <!--<div class="text-center">
+                                <img src="images/default_user.jpg" alt="Placeholder image for Cooper" class="rounded-full h-20 w-20 mx-auto">
+                                <p class="font-semibold">Cooper De Nicola</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/default_user.jpg" alt="Placeholder image for Sarah" class="rounded-full h-20 w-20 mx-auto">
+                                <p class="font-semibold">Sarah Chen</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/default_user.jpg" alt="Placeholder image for Liza" class="rounded-full h-20 w-20 mx-auto">
+                                <p class="font-semibold">Liza Goldberg</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/default_user.jpg" alt="Placeholder image for Joseph" class="rounded-full h-20 w-20 mx-auto">
+                                <p class="font-semibold">Joseph Tey</p>
+                            </div> -->
+                        </div>
+                        <!--<p>Questions? Contact us at <strong>CSE309-aut2223-staff@lists.stanford.edu</strong>!</p> -->
+                        <h2 id="syllabus">Course Policys</h2>
+                        <p><i>.</i></p>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Follow all rules of IUB  </span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>It is the student’s responsibility to gather information about the assignments and covered topics if they miss lectures. Regular class attendance is mandatory. Points will be taken off for missing class tests. Without 70% of attendance, sitting for final exam is NOT allowed. According to IUB system students must enter the classroom within the first 10 minutes to get the attendance submitted.
+                                    The date and syllabus of quiz, midterm and final exam is already given here, however, announcements will be given ahead of time. There is NO provision for make-up quizzes.
+                                    The reading materials for each class may be given prior to that class so that students may have a cursory look into the materials. 
+                                    Class participation is vital for better understanding of web application development. Students are invited to raise questions.
+                                    Students should take tutorials with the instructor during the office hours. Prior appointment is required.
+                                    Students must maintain the IUB code of conduct and ethical guidelines offered by the school of engineering and computer sciences.
+                                    </p>
+                                <!--<p>
+                                    <a href="https://docs.google.com/presentation/d/1ruljLv70nKeH0IhzZ2McUM9v5jJbyCLpzcQZvRDGQ3k/edit?usp=sharing" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://bit.ly/CSE309-w1" class="chip ~info m-2 ml-0">Starter Code</a>
+                                    <a href="https://forms.gle/2LVhZECoGyPx9RiJ9" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                    <a href="https://github.com/milesmcc/CSE309-w1/blob/answers/assignment.js" class="chip ~positive m-2 ml-0">Solution</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 2</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Sentiment Analysis and Refugee Tweets</strong> &mdash; 10/4, Miles</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/122EbBBwNRhtQ_8Ftzg0nfvpmOZHt_0B93U3VxgIKsIs/edit?usp=sharing" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://github.com/milesmcc/CSE309-sentiment" class="chip ~info m-2 ml-0">Starter Code</a>
+                                    <a href="https://forms.gle/PZQaQxQ15nq8XxvY9" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                    <!-- <a href="https://github.com/milesmcc/CSE309-sentiment/blob/solution/assignment.js" class="chip ~positive m-2 ml-0">Solution</a> -->
+                               <!-- </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 3</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Cancer Diagnosis with K-Nearest Neighbors</strong> &mdash; 10/11, Sarah</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1WDdrUeHhih0oBk3KhO5Sa5tB-JMQc8LaPCEvULUjRw0/edit#slide=id.p4" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://www.dropbox.com/sh/gi0m55e3i7u0fez/AABnG62WIWT3BfQXyW30c5ULa?dl=0" class="chip ~info m-2 ml-0">Starter Code</a>
+                                    <a href="https://docs.google.com/forms/d/18yF-6PTX5AV0obTF9KQIqbidj52ziuh4PpastIc67eo/edit#responses" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                     <a href="https://github.com/milesmcc/CSE309-sentiment/blob/solution/assignment.js" class="chip ~positive m-2 ml-0">Solution</a> -->
+                                <!--</p> -->
+                            <!--</div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 4</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>CS for Climate Change</strong> &mdash; 10/18, Liza</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1vOs0iVA89z4xUC-WPWbAqb-2VjLjA73LP58UKfWPN5Q/edit?usp=sharing" class="chip ~urge m-2 ml-0">Slides</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 5</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Mental Health and ELIZA</strong> &mdash; 10/25, Joe</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1yzoudeucrX17qkOp7J8TY7xq6tUHWyJ_6K_vpi2Pa-o/edit?usp=sharing" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://tinyurl.com/eliza-starter" class="chip ~info m-2 ml-0">Starter Code</a>
+                                    <a href="tinyurl.com/cs106-week5" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 6</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Open Source Software (class cancelled for health reasons)</strong> &mdash; 11/1, Miles</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 7</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Trust and Safety (optional for Democracy Day)</strong> &mdash; 11/8, Miles</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1sYBEDc3ur1PCiaxQ0wAq8uMqm_etECIU0e1tC7_bm_o/edit?usp=sharing" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://forms.gle/mNbPatBtKhDdv5S69" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 8</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Ethical Hacking and Web Security</strong> &mdash; 11/15, Cooper</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1HPzGyXSM-OYzMTTFW6Q8a6JNTY4uIQBaB9f3JwybKnY/edit#slide=id.g18e63904f6a_0_36" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://forms.gle/GXBTovhmngCvvzuX9" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 9</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>Guest Lecture: Bluebonnet Data</strong> &mdash; 11/29</p>
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1yaOVkKIBPL9cZJr6wOIIOp0KUoahSVBmTFKYta-BYqU/edit?usp=sharing" class="chip ~urge m-2 ml-0">Slides</a>
+                                    <a href="https://forms.gle/PRYBUar9mxnj5FWx7" class="chip ~critical m-2 ml-0">Checkoff Form</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-row-dense gap-5 grid-cols-4 md:grid-cols-7">
+                            <div>
+                                <span class="chip ~neutral !low bg-neutral-50">Week 10</span>
+                            </div>
+                            <div class="col-span-3 md:col-span-6">
+                                <p><strong>No class!</strong></p> -->
+                            </div>
+                        </div>
+                        <h2 id="ama">Suggested Textbooks:</h2>
+                        <p>The course will be based mostly on practical work, but the following books and online materials can come handy:
+                            Professional Java for Web Applications by Nicholas S. Williams
+                            Expert PHP and MySQL by Andrew Curioso, Ronald Bradford, Patrick Galbraith
+                            Learning PHP, MySQL, JavaScript, and CSS: A Step-by-Step Guide to Creating Dynamic Websites by Robin Nixon
+                            </p>
+                        <details>
+                            <summary class="font-semibold cursor-pointer">Note:
+                                Cheating and plagiarism (presentation of another person’s thoughts or words) on exams and assignments are unacceptable. University policies shall be strictly enforced in this regard.</summary>
+                            <div class="content mt-2">
+                             <!--    <p>. <a href="https://mailman.stanford.edu/mailman/listinfo/cs-for-social-good">mailing list</a>! We send out weekly newsletters with events and opportunities in the tech for social impact space. Everyone is welcome at our events and the email list is the best way to stay informed!</p> -->
+                            </div>
+                        </details>
+                    </section>
+                </main>
+                <hr class="sep h-16">
+                <footer>
+                    <footer class="family-secondary support content">
+                        
+                    </footer>
+                </footer>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
